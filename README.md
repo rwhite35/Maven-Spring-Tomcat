@@ -1,10 +1,10 @@
 ### Spring Boot 3.3.2 Example
 
 This project updates the initial v1.0 - Spring Framework(3.2.0) project to support 
-OpenJDK v17.0.12, Gradle v8.9, Tomcat v10.1, and using Spring 3.3.x APIs:
-- `Thymeleaf` for view render engine
-- `Boot-Starter-Web` for request routing
-- `Boot-Starter-Validation` for form input validation
+OpenJDK v17.0.12, Gradle v8.9, Tomcat v10.1, and uses Spring 3.3.x APIs:
+- `Thymeleaf` view render engine
+- `Boot-Starter-Web` mvc request routing
+- `Boot-Starter-Validation` form input validation
 
 --
 ### About the Project
@@ -21,19 +21,17 @@ The remainder of this document is specific to setup for this project.
 
 1. `Spring Boot` web interface was used to initially create this project but is not necessary if cloned from repo. For setup wizard reference see [start.spring.io](start.spring.io).
 
-2. The development environment is MacOS (Sonoma), and used [Homebrew](https://brew.sh) for `OpenJDK`, `Gradle`, and `Tomcat` package management. MacOS ships with Java (JavaSE 1.8) but that is mainly for System purposes and not recommended for general development purpose.  `Spring Framework` is cross-platform compatible and the project can build/run on either Linux or Windows. 
+2. The development environment was MacOS (Sonoma), and uses [Homebrew](https://brew.sh) for `OpenJDK`, `Gradle`, and `Tomcat` package management. MacOS ships with Java (JavaSE 1.8) but that is mainly for System purposes and not recommended for general development purpose.  `Spring Framework` is cross-platform compatible and will build/run on either Linux or Windows environments. 
 
-3. If using MacOS/Homebrew, the JAVA_HOME path should be something like:
+3. JAVA_HOME path should be something like the following when cloned on MacOS using Homebrew:
 
 - `/usr/local/Cellar/openjdk@17/17.0.12/libexec/openjdk.jdk/Contents/Home`
 
-4. If multiple Java SDKs are installed, and `java_home` utility is available use that to target a specific SDK:
+4. Use `java_home` utility if available and multiple Java SDKs are installed. The number being the target SDK version which requires version 17, but support upto 22.
 
 - `export JAVA_HOME=/usr/libexec/java_home -v 17`
 
-where the number value is the target version used for Java.
-
-5. This project was created using VSCode IDE which most project libraries and extensions through its Extension Manager. Regardless, all `Dependency Implementations` are listed in the Grandle build (build.gradle) file and should automatically pull in any required dependencies regardless of the IDE used.
+5. This project uses VSCode IDE and imports most project libraries and extensions through its Extension Manager. Regardless all `Dependency Implementations` are listed in the Grandle build (build.gradle) file and should automatically pull in any required dependencies regardless of the IDE used.
 
 
 --
@@ -53,6 +51,7 @@ Click the `here` link to present a form with one required input field as String 
 Finally, on entering valid text, clicking submit will present a new view with a the submitted String as the new name to use.
 
 ![Index at src/main/java/resources/templates/result.html](https://github.com/rwhite35/Maven-Spring-Tomcat/blob/master/screens/result.png)
+
 
 Enjoy!
 
