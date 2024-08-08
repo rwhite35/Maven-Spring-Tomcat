@@ -10,9 +10,9 @@ OpenJDK v17.0.12, Gradle v8.9, Tomcat v10.1, and using Spring 3.3.x APIs:
 ### About the Project
 
 This project synthesizes three Spring Boot examples into one runnable app. See the following guide topics for example documentation: 
-> [Quick Start](https://spring.io/quickstart)
-> [REST Services](https://spring.io/guides/gs/rest-service)
-> [Validate Form Input](https://spring.io/guides/gs/validating-form-input)
+- [Quick Start](https://spring.io/quickstart)
+- [REST Services](https://spring.io/guides/gs/rest-service)
+- [Validate Form Input](https://spring.io/guides/gs/validating-form-input)
 
 The remainder of this document is specific to setup for this project.
 
@@ -46,13 +46,13 @@ The debugger should launch Tomcat with localhost:8080 (or whatever target port) 
 
 Click the `here` link to present a form with one required input field as String of characters having a size 2 to 30 characters in length. NOTE: error handling not included in this project - couldn't do it all for yeah, right?.
 
-![Index at src/main/java/resources/templates/form.html](https://github.com/rwhite35/Maven-Spring-Tomcat/screens/greetingF1.png)
+![Index at src/main/java/resources/templates/form.html](https://github.com/rwhite35/Maven-Spring-Tomcat/blob/master/screens/greetingF1.png)
 
-![Index at src/main/java/resources/templates/greeting.html](https://github.com/rwhite35/Maven-Spring-Tomcat/screens/greetingF2.png)
+![Index at src/main/java/resources/templates/greeting.html](https://github.com/rwhite35/Maven-Spring-Tomcat/blob/master/screens/greetingF2.png)
 
 Finally, on entering valid text, clicking submit will present a new view with a the submitted String as the new name to use.
 
-![Index at src/main/java/resources/templates/result.html](https://github.com/rwhite35/Maven-Spring-Tomcat/screens/result.png)
+![Index at src/main/java/resources/templates/result.html](https://github.com/rwhite35/Maven-Spring-Tomcat/blob/master/screens/result.png)
 
 Enjoy!
 
