@@ -31,7 +31,7 @@ The remainder of this document is specific to setup for this project.
 
 - `export JAVA_HOME=/usr/libexec/java_home -v 17`
 
-5. This project uses VSCode IDE and imports most project libraries and extensions through its Extension Manager. Regardless all `Dependency Implementations` are listed in the Grandle build (build.gradle) file and should automatically pull in any required dependencies regardless of the IDE used.
+5. This project uses VSCode IDE and imports most project libraries and extensions through its Extension Manager. Regardless all `Dependency Implementations` are listed in the Gradle build (build.gradle) file and should automatically pull in any required dependencies regardless of the IDE used.
 
 
 --
