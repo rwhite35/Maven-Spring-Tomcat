@@ -40,7 +40,7 @@ The remainder of this document is specific to setup for this project.
 To compile and test this application, ensure Debug Mode is enabled in the IDE preferences and select the class DemoApplication.java (main) to compile and run in debug mode.
 The debugger should launch Tomcat with localhost:8080 (or whatever target port) which will display index.html.
 
-![Index at src/main/java/resources/templates/index.html](https://github.com/rwhite35/Maven-Spring-Tomcat/screens/index.png)
+![Index at src/main/java/resources/templates/index.html](https://github.com/rwhite35/Maven-Spring-Tomcat/blob/master/screens/index.png)
 
 Click the `here` link to present a form with one required input field as String of characters having a size 2 to 30 characters in length. NOTE: error handling not included in this project - couldn't do it all for yeah, right?.
 
