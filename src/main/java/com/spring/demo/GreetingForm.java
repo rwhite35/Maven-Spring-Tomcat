@@ -13,6 +13,7 @@ public class GreetingForm {
     // getter setters
     public String getName() { return this.name; }
     public void setName(String name) {
+        System.out.println("set GreetingForm.name: " + name);
         this.name = name;
     }
     public String toString() {

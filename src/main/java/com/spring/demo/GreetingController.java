@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -32,19 +33,32 @@ public class GreetingController implements WebMvcConfigurer {
     }
 
 
+    // on submit validates input fields defined in bound GreetingForm
+    // on submit passes input values to model GreetingResult instead of form
+    // redirects view to result.html
     @PostMapping("/greeting")
     public String checkGreetingInfo(
-        GreetingForm greetingForm, 
+        GreetingForm greetingForm,
         BindingResult bindingResult
     ) {
-        if (bindingResult.hasErrors()) {
-            return "form";
-        }
-        return "redirect:/greeting/result";
+        // handle invalid input here (not provided in demo)
+        if (bindingResult.hasErrors()) { return "form"; }
+        String newname = bindingResult.getFieldValue("name").toString();
+
+        System.out.println("post valid GreetingForm.name: " + newname);
+        return "redirect:/greeting/result?name=" + newname;
     }
 
-    @Bean
-    GreetingForm getGreetingForm() {
-        return new GreetingForm();
+    // adds `name` to GreetingControllers Model object which
+    // adds `model.name` object for binding and handling `name` data
+    // adds `greetingForm` object as view model for this path
+    @GetMapping("/greeting/result")
+    public String greetingResult(
+        @RequestParam(name="name", required=false, defaultValue="You Again?") String name,
+        @ModelAttribute GreetingForm greeting, 
+        Model model
+    ) {
+        model.addAttribute("greeting", greeting);
+        return "result";
     }
 }
